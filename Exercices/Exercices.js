@@ -2,10 +2,6 @@ function findLargestNumber(numberTab) {
     return Math.max(...numberTab);
 }
 
-// function sortWords(wordTab){
-//     return wordTab.sort();
-// }
-
 const sortWords = wordTab => wordTab.sort();
 
 function countOccurences(chaine, letter) {
@@ -45,13 +41,21 @@ function mergeObjects(objectA, objectB) {
     for (i of Object.values(objectB)) proprietesObjets.push(i);
     return proprietesObjets;
 }
-/*
-function sumArray(objectA, objectB) {
-    proprietesObjets = [];
-    for (i of Object.values(objectA)) proprietesObjets.push(i);
-    for (i of Object.values(objectB)) proprietesObjets.push(i);
-    return proprietesObjets;
-}*/
+
+function sumArray(numberTab) {
+    sum = 0;
+    for (i of numberTab) sum += i;
+    return sum;
+}
+
+
+function sortObject(object) {
+    tab = [];
+    for (i of Object.values(object)) tab.push(i);
+    tab.sort()
+    return tab;
+}
+
 
 console.log(findLargestNumber([1, 2, 3]))
 
@@ -68,3 +72,7 @@ console.log(swapVariables(1, 2))
 console.log(parseObject({a: 69, b: 420, c: 'oui'}));
 
 console.log(mergeObjects({a: 69, b: 420, c: 'oui'}, {d: "non"}));
+
+console.log(sumArray([1, 3, 6]))
+
+console.log(sortObject({a: 69, b: 420, c: 'oui'}));
